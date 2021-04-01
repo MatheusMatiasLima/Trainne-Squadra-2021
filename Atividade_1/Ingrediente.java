@@ -27,8 +27,8 @@ public class Ingrediente {
     //sobrescrevendo o metodo toString para escrever do meu jeito
     @Override
     public String toString() {
-        return "Nome do Ingrediente: " + nome + "\n" + 
-               "Data de Validade: " + formataData.format(data) + "\n\n";
+        return "Nome do Ingrediente: " + nome + "<br>" + 
+               "Data de Validade: " + formataData.format(data) + "<br><br>";
     }
 
 }

@@ -70,13 +70,13 @@ public class Cozinha {
     //sobrescrevendo o metodo toString para escrever do meu jeito
     @Override
     public String toString() {
-        return "Prato principal: " + getPratoPrincipal() + "\n" +
-               "Hora da abertura: " + getHoraAber() + "h\n" +
-               "Hora do fechamento: " + getHoraFech() + "h\n\n" +
+        return "Prato principal: " + getPratoPrincipal() + "<br>" +
+               "Hora da abertura: " + getHoraAber() + "h<br>" +
+               "Hora do fechamento: " + getHoraFech() + "h<br><br>" +
 
-               "***Lista de ingredientes***\n\n"+
+               "***Lista de ingredientes***<br><br>"+
                listaDeIngredientes() +
-               "***Lista de funcionarios***\n\n" + 
+               "***Lista de funcionarios***<br><br>" + 
                listaDeFuncionarios();
     }
 }

@@ -17,7 +17,7 @@ public class Funcionario extends Pessoa {
     //sobrescrevendo o metodo toString para escrever do meu jeito
     @Override
     public String toString() {
-        return "Nome do funcionario: " + getNome() + "\n" + 
-               "Atividade do funcionario: " + getAtividade() + "\n\n";
+        return "Nome do funcionario: " + getNome() + "<br>" + 
+               "Atividade do funcionario: " + getAtividade() + "<br><br>";
     }
 }

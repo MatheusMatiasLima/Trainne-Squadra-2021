@@ -8,6 +8,6 @@ public class Mineira extends Cozinha {
 
     @Override
     public String toString() {
-        return "*****Cozinha Mineira*****\n\n" + super.toString();
+        return "*****Cozinha Mineira*****<br><br>" + super.toString();
     }
 }

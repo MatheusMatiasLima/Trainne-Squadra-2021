@@ -8,6 +8,6 @@ public class Italiana extends Cozinha {
 
     @Override
     public String toString() {
-        return "*****Cozinha Italiana*****\n\n" + super.toString();
+        return "*****Cozinha Italiana*****<br><br>" + super.toString();
     }    
 }

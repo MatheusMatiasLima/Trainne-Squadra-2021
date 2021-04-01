@@ -8,6 +8,6 @@ public class Chinesa extends Cozinha {
 
     @Override
     public String toString() {
-        return "*****Cozinha Chinesa*****\n\n" + super.toString();
+        return "*****Cozinha Chinesa*****<br><br>" + super.toString();
     }
 }
