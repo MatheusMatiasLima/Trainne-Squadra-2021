@@ -17,7 +17,7 @@ public class Cozinha {
         funcionarios = new ArrayList<Funcionario>();
     }
 
-    //Estou declarando os metodos como privado, ja que o unico lugar que vamos usar é no metodo toString da propria classe.
+    //Estou declarando alguns os metodos como privado, ja que o unico lugar que vamos usar é no metodo toString da propria classe.
     //Se for utilizar em outro lugar é so mudar.
 
     private int getHoraAber() {
@@ -32,11 +32,11 @@ public class Cozinha {
         return pratoPrincipal;
     }
     
-    public void adicionarIngrediente(Ingrediente ingr) {
+    protected void adicionarIngrediente(Ingrediente ingr) {
         ingredientes.add(ingr);
     }
 
-    public void adicionarFuncionario(Funcionario func) {
+    protected void adicionarFuncionario(Funcionario func) {
         funcionarios.add(func);
     }
 
