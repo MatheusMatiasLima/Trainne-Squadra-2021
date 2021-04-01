@@ -1,7 +1,41 @@
 package Atividade_1;
-public class Restaurante {
-    public static void main(String[] args) {
+import java.util.ArrayList;
 
+public class Restaurante {
+    private ArrayList<Cozinha> cozinhas;
+
+    public ArrayList<Cozinha> getCozinhas() {
+        return cozinhas;
+    }
+
+    public Restaurante () {
+        cozinhas = new ArrayList<Cozinha>();
+    }
+    
+    public void adicionarCozinha(Cozinha c) {
+        cozinhas.add(c);
+    }
+
+    public void imprimirCozinhas() {
+        for (Cozinha c : cozinhas) {
+            System.out.println(c);
+        }
+    }
+
+    public String gerarStringHTML() {
+        String retorno = "<html>";
+        for (Cozinha c : cozinhas) {
+            retorno += c.toString();
+        }
+        retorno += "</html>";
+        return retorno;
+    }
+
+    public void gerarDadosAleatorios() {
+        //Limpando todos os dados anteriores
+        cozinhas = null;
+        cozinhas = new ArrayList<Cozinha>();
+        
         //Poderia criar um objeto para cada cozinha mas usar polimorfismo é mais elegante :)
         //Declarando...
         Cozinha cozinha;
@@ -26,8 +60,8 @@ public class Restaurante {
         cozinha.adicionarFuncionario(new Funcionario("Joao", Funcionario.Atividade.Ajudante));
         cozinha.adicionarFuncionario(new Funcionario("Carla", Funcionario.Atividade.Ajudante));
         cozinha.adicionarFuncionario(new Funcionario("Lucas", Funcionario.Atividade.Outro));
-        //imprimindo...
-        System.out.println(cozinha);
+        //adicionando...
+        adicionarCozinha(cozinha);
 
         
         /**Cozinha Chinesa*/
@@ -46,8 +80,8 @@ public class Restaurante {
         cozinha.adicionarFuncionario(new Funcionario("Li", Funcionario.Atividade.Cozinheiro));
         cozinha.adicionarFuncionario(new Funcionario("Wang", Funcionario.Atividade.Ajudante));
         cozinha.adicionarFuncionario(new Funcionario("Zhang", Funcionario.Atividade.Outro));
-
-        System.out.println(cozinha);
+        //adicionando...
+        adicionarCozinha(cozinha);
         
         /**Cozinha Italiana*/
         //Repedindo. Agora pra italiana...
@@ -64,7 +98,7 @@ public class Restaurante {
         cozinha.adicionarFuncionario(new Funcionario("Andrea", Funcionario.Atividade.Cozinheiro));
         cozinha.adicionarFuncionario(new Funcionario("Giulia", Funcionario.Atividade.Ajudante));
 
-        System.out.println(cozinha);
-
+        //adicionando...
+        adicionarCozinha(cozinha);
     }
 }
