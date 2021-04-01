@@ -3,15 +3,10 @@ import java.util.ArrayList;
 // O tipo da cozinha vai ser definido na subclasse.
 // Sera melhor assim porque se no futuro quiser adicionar alguma coisa em uma cozinha especifica vai ser mais facil
 public class Cozinha {
-    //Armazena a hora que a cozinha abre
     private int horaAbertura;
-    //Armazena a hora que a cozinha fecha
     private int horaFechamento;
-    //O prato principal da cozinha
     private String pratoPrincipal;
-    //Uma lista de ingredientes
     private ArrayList<Ingrediente> ingredientes;
-    //Uma lista de funcionarios
     private ArrayList<Funcionario> funcionarios;
 
     public Cozinha (int horaAbertura, int horaFechamento, String pratoPrincipal) {
@@ -36,7 +31,7 @@ public class Cozinha {
     private String getPratoPrincipal() {
         return pratoPrincipal;
     }
-    //Os dois proximos precisam ser publicos, ja que esta sendo chamado na classe Restaurante
+    
     public void adicionarIngrediente(Ingrediente ingr) {
         ingredientes.add(ingr);
     }
