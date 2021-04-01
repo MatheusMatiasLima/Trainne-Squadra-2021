@@ -4,9 +4,9 @@ import java.util.ArrayList;
 public class Restaurante {
     private ArrayList<Cozinha> cozinhas;
 
-    public ArrayList<Cozinha> getCozinhas() {
-        return cozinhas;
-    }
+    // public ArrayList<Cozinha> getCozinhas() {
+    //     return cozinhas;
+    // }
 
     public Restaurante () {
         cozinhas = new ArrayList<Cozinha>();
@@ -60,7 +60,6 @@ public class Restaurante {
         cozinha.adicionarFuncionario(new Funcionario("Joao", Funcionario.Atividade.Ajudante));
         cozinha.adicionarFuncionario(new Funcionario("Carla", Funcionario.Atividade.Ajudante));
         cozinha.adicionarFuncionario(new Funcionario("Lucas", Funcionario.Atividade.Outro));
-        //adicionando...
         adicionarCozinha(cozinha);
 
         
@@ -80,11 +79,9 @@ public class Restaurante {
         cozinha.adicionarFuncionario(new Funcionario("Li", Funcionario.Atividade.Cozinheiro));
         cozinha.adicionarFuncionario(new Funcionario("Wang", Funcionario.Atividade.Ajudante));
         cozinha.adicionarFuncionario(new Funcionario("Zhang", Funcionario.Atividade.Outro));
-        //adicionando...
         adicionarCozinha(cozinha);
         
         /**Cozinha Italiana*/
-        //Repedindo. Agora pra italiana...
         horaAbertura = 13;
         horaFechamento = 22;
         pratoPrincipal = "Yakissoba Italiano";
@@ -98,7 +95,6 @@ public class Restaurante {
         cozinha.adicionarFuncionario(new Funcionario("Andrea", Funcionario.Atividade.Cozinheiro));
         cozinha.adicionarFuncionario(new Funcionario("Giulia", Funcionario.Atividade.Ajudante));
 
-        //adicionando...
         adicionarCozinha(cozinha);
     }
 }
