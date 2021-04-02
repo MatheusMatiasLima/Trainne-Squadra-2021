@@ -1,10 +1,11 @@
 package Atividade_1;
 import java.util.Date;
 import java.util.Calendar;
+import java.io.Serializable;
 //Usada no toString
 import java.text.DateFormat;
 
-public class Ingrediente {
+public class Ingrediente implements Serializable {
     private String nome;
     //Documentação da classe Date https://docs.oracle.com/javase/8/docs/api/java/util/Date.html
     //**IMPORTANTE** o mes é de 0 a 11

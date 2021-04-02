@@ -1,6 +1,9 @@
 package Atividade_1;
+
+import java.io.Serializable;
+
 //Todo funcionario é uma pessoa
-public class Funcionario extends Pessoa {
+public class Funcionario extends Pessoa implements Serializable{
     // A funcao so pode ser cozinheiro, ajutante ou outro.
     public enum Atividade {Cozinheiro, Ajudante, Outro}
     private Atividade atividade;

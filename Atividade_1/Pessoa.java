@@ -1,5 +1,8 @@
 package Atividade_1;
-public class Pessoa {
+
+import java.io.Serializable;
+
+public class Pessoa implements Serializable{
     private String nome;
 
     public Pessoa(String nome) {

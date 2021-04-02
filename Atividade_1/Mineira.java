@@ -1,5 +1,8 @@
 package Atividade_1;
-public class Mineira extends Cozinha {
+
+import java.io.Serializable;
+
+public class Mineira extends Cozinha implements Serializable {
     String tipo = "Mineira";
 
     public Mineira (int horaAbertura, int horaFechamento, String pratoPrincipal) {

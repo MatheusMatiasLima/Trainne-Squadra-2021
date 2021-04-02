@@ -1,14 +1,11 @@
 package Atividade_1;
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Restaurante {
+public class Restaurante implements Serializable {
     private ArrayList<Cozinha> cozinhas;
 
-    // public ArrayList<Cozinha> getCozinhas() {
-    //     return cozinhas;
-    // }
-
-    public Restaurante () {
+    public Restaurante  () {
         cozinhas = new ArrayList<Cozinha>();
     }
     
@@ -23,12 +20,12 @@ public class Restaurante {
     }
 
     public String gerarStringHTML() {
-        String retorno = "<html>";
+        String stringHTML = "<html>";
         for (Cozinha c : cozinhas) {
-            retorno += c.toString();
+            stringHTML += c.toString();
         }
-        retorno += "</html>";
-        return retorno;
+        stringHTML += "</html>";
+        return stringHTML;
     }
 
     public void gerarDadosAleatorios() {

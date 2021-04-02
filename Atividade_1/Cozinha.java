@@ -1,8 +1,9 @@
 package Atividade_1;
+import java.io.Serializable;
 import java.util.ArrayList;
 // O tipo da cozinha vai ser definido na subclasse.
 // Sera melhor assim porque se no futuro quiser adicionar alguma coisa em uma cozinha especifica vai ser mais facil
-public class Cozinha {
+public class Cozinha implements Serializable {
     private int horaAbertura;
     private int horaFechamento;
     private String pratoPrincipal;
