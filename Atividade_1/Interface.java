@@ -2,7 +2,6 @@ package Atividade_1;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.io.IOException;
 
 public class Interface {
     private JFrame janela;
@@ -33,7 +32,19 @@ public class Interface {
             new ActionListener () {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    JOptionPane.showMessageDialog(janela, "Ainda não está implementado!");
+
+                    try {
+                        //limpar o que tinha antes (poderia salvar em outro arquivo mas prefiro assim)
+                        meuRestaurante = null;
+                        meuRestaurante = Manipuladora.lerArquivoBinario("binario");
+                        JOptionPane.showMessageDialog(janela, "Arquivo carregado!");
+                    }
+                    catch (Exception erro) {
+                        System.out.println(erro);
+                        JOptionPane.showMessageDialog(janela, "Erro: " + erro);
+                    }
+
+                    
                 }
             }
         );
@@ -42,7 +53,14 @@ public class Interface {
             new ActionListener () {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    JOptionPane.showMessageDialog(janela, "Ainda não está implementado!");
+                    try {
+                        Manipuladora.gerarArquivoBinario(meuRestaurante, "binario");
+                        JOptionPane.showMessageDialog(janela, "Arquivo salvo!");
+                    }
+                    catch (Exception erro) {
+                        System.out.println(erro);
+                        JOptionPane.showMessageDialog(janela, "Erro: " + erro);
+                    }
 
                     
                 }
@@ -60,8 +78,6 @@ public class Interface {
                     catch (Exception erro) {
                         JOptionPane.showMessageDialog(janela, "Erro: " + erro);
                     }
-
-                    
                 }
             }
         );
@@ -88,8 +104,6 @@ public class Interface {
                     //Adicionando o painel com scroll no frame
                     frame.add(janelaComScroll);
                     frame.setVisible(true);
-
-
                 }
             }
         );
